@@ -6,6 +6,38 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Dependencies
+node_modules/
+
+# Environment
+.env
+*.env.local
+
+# Database
+*.db
+*.sqlite
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# SSL Certificates (don't commit these!)
+nginx/ssl/*.key
+nginx/ssl/*.crt
+nginx/ssl/*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+.docker/
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
