@@ -1,9 +1,9 @@
 // ============================================
 // Task Board Frontend Application
-// ENGSE207 - Week 6 Docker Version
+// ENGSE207 - Week 7 Cloud Version
 // ============================================
 
-const API_BASE = '/api';
+const API_BASE = 'https://engce301-week6-ntier-docker-production.up.railway.app';
 
 // ============================================
 // API Functions
