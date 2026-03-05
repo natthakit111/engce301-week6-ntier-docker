@@ -17,6 +17,13 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 // ============================================
 
+// CORS - อนุญาต requests จาก Nginx
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 // server.js - ส่วน CORS (เพิ่ม/แก้ไข)
 // const cors = require('cors');
 
