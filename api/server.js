@@ -17,12 +17,12 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 // ============================================
 
-// // CORS - อนุญาต requests จาก Nginx
-// app.use(cors({
-//     origin: process.env.CORS_ORIGIN || '*',
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ['Content-Type', 'Authorization']
-// }));
+// CORS - อนุญาต requests จาก Nginx
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Body parser
 app.use(express.json());
@@ -142,7 +142,5 @@ const corsOptions = {
     },
     credentials: true
 };
-
-app.use(cors(corsOptions));
 
 startServer();
