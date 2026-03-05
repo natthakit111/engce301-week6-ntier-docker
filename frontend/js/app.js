@@ -33,13 +33,13 @@ async function fetchAPI(endpoint, options = {}) {
 
 // Get all tasks
 async function getTasks() {
-    const response = await fetchAPI('/tasks');
+    const response = await fetchAPI('/api/tasks');
     return response.data;
 }
 
 // Create task
 async function createTask(taskData) {
-    const response = await fetchAPI('/tasks', {
+    const response = await fetchAPI('/api/tasks', {
         method: 'POST',
         body: JSON.stringify(taskData)
     });
@@ -48,7 +48,7 @@ async function createTask(taskData) {
 
 // Update task
 async function updateTask(id, taskData) {
-    const response = await fetchAPI(`/tasks/${id}`, {
+    const response = await fetchAPI(`/api/tasks/${id}`, {
         method: 'PUT',
         body: JSON.stringify(taskData)
     });
@@ -57,14 +57,14 @@ async function updateTask(id, taskData) {
 
 // Delete task
 async function deleteTask(id) {
-    await fetchAPI(`/tasks/${id}`, {
+    await fetchAPI(`/api/tasks/${id}`, {
         method: 'DELETE'
     });
 }
 
 // Get statistics
 async function getStats() {
-    const response = await fetchAPI('/tasks/stats');
+    const response = await fetchAPI('/api/tasks/stats');
     return response.data;
 }
 
